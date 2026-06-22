@@ -36,7 +36,8 @@ When unsure of the path, run `pwd` and `ls`, or pass `--themes <dir>` to `apply.
 Pick the workflow that matches the request, then follow the matching reference file.
 
 ### Apply a theme  ->  `references/apply-theme.md`
-Browse the available themes, let the user pick one, confirm scope and mode, then apply with `apply.mjs`.
+Browse the available themes and present them with the AskUserQuestion tool, always including a visible
+"Make my own theme" choice. Let the user pick, confirm scope and mode, then apply with `apply.mjs`.
 Never hand-edit `settings.json`; the script preserves other settings and writes a backup.
 
 ### Create a theme  ->  `references/create-theme.md`
@@ -59,3 +60,6 @@ maintainer must approve before merge.
   stays in sync, then `validate.mjs`. CI rejects out-of-sync or invalid themes.
 - Apply changes through `apply.mjs`, not by editing JSON yourself, so existing settings survive and a
   `.bak` backup is written.
+- When you offer the user a set of choices (which theme, which scope, create versus apply), use the
+  AskUserQuestion tool rather than a plain text list, and make any "make your own" or "something else"
+  path an explicit, visible option, never a hidden one.

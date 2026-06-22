@@ -7,9 +7,18 @@ Goal: get a theme's verbs into the right `settings.json` without disturbing anyt
 Locate the themes directory (see SKILL.md for resolution order). Read each theme folder's `verbs.json`
 for `name`, `description`, `verbs.length`, and `maintainers`.
 
-If there are only a handful of themes, list them with name, verb count, maintainer, and two sample
-verbs. If there are many, do not dump them all. Ask what the user is into (games, sci-fi, cooking, calm,
-chaotic) and show the closest few. Let them ask to see more.
+Present the choices with the AskUserQuestion tool, not a plain text list. It gives the user a clean
+picker, and you can drop a couple of sample verbs into each option's preview so they feel the flavor
+before choosing.
+
+Always include one extra option, "Make my own theme", as a first-class, visible choice that routes to
+`create-theme.md`. Browsing and creating are two sides of this skill, and a user who does not love any
+existing theme needs an obvious way to build one. Do not bury this behind the picker's hidden "Other"
+entry; list it explicitly, because users do not always notice "Other".
+
+If there are many themes, do not dump them all. First ask what vibe the user is into (games, sci-fi,
+cooking, calm, chaotic), then present the closest few plus "Make my own theme", and let them ask to see
+more.
 
 ## 2. Confirm scope and mode
 
