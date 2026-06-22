@@ -11,14 +11,18 @@ npm installer at once. It manages the `spinnerVerbs` setting (see
 
 ## Layout
 
-- `skills/spinner-customizer/` the skill: `SKILL.md`, `references/`, and `scripts/apply.mjs` (safe
-  settings merge, bundled so a standalone install works).
+The repo root IS the skill (a single skill at the root, no `skills/` wrapper).
+
+- `SKILL.md` the skill entrypoint, with `references/` (mechanism, apply, create, contribute) beside it.
+- `scripts/` engine and skill helper: `apply.mjs` (safe settings merge, self-contained for standalone
+  installs), `build.mjs` (syncs READMEs and the index from `verbs.json`), `validate.mjs` (lints).
+  `lib/themes.mjs` is shared by build and validate.
 - `themes/<NAME>/` one theme: `verbs.json` (source of truth) and `README.md` (prose on top, generated
   verb list at the bottom). `_TEMPLATE` is the starting point and is ignored by the tooling.
-- `scripts/` the engine: `build.mjs` syncs READMEs and the index from `verbs.json`, `validate.mjs`
-  lints. `lib/themes.mjs` is shared by both.
-- `bin/cli.mjs` the npm install command (`spinnerverbs4cc`). Install only, no theme logic.
-- `.claude-plugin/` plugin and marketplace manifests.
+- `bin/cli.mjs` the npm install command (`spinnerverbs4cc`). Install only; copies SKILL.md, references,
+  scripts, and themes into `~/.claude/skills/spinner-customizer/`.
+- `.claude-plugin/` plugin and marketplace manifests; the root SKILL.md is auto-discovered as the
+  plugin's single skill.
 - `.github/` CI and templates.
 
 ## Rules

@@ -26,7 +26,7 @@ Always use `apply.mjs`. It preserves every other setting, writes a `.bak` backup
 ellipses, and de-duplicates.
 
 ```
-node <skill>/scripts/apply.mjs <slug> --scope user --mode replace
+node scripts/apply.mjs <slug> --scope user --mode replace
 ```
 
 Examples:

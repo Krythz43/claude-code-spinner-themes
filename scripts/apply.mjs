@@ -56,8 +56,7 @@ function themesCandidates() {
   const list = [];
   if (args.themes) list.push(resolve(String(args.themes)));
   if (process.env.CLAUDE_PLUGIN_ROOT) list.push(join(process.env.CLAUDE_PLUGIN_ROOT, 'themes'));
-  list.push(join(scriptDir, '..', 'themes'));             // bundled inside an installed skill
-  list.push(join(scriptDir, '..', '..', '..', 'themes')); // repo layout
+  list.push(join(scriptDir, '..', 'themes')); // themes/ sits next to scripts/ in both repo and install
   return list;
 }
 

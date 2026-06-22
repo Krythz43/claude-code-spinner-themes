@@ -7,10 +7,11 @@
     "spinnerverbs4cc": "bin/cli.mjs"
   },
   "files": [
-    "bin/",
-    "skills/",
-    "themes/",
+    "SKILL.md",
+    "references/",
     "scripts/",
+    "themes/",
+    "bin/",
     "README.md",
     "LICENSE"
   ],

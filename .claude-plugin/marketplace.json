@@ -12,10 +12,7 @@
       "name": "spinner-themes",
       "description": "Themes for the Claude Code spinner, plus a skill to apply, create, and contribute them.",
       "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/spinner-customizer"
-      ]
+      "strict": false
     }
   ]
 }

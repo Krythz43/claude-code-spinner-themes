@@ -46,8 +46,8 @@ This copies the skill and the themes into `~/.claude/skills/`. Add `--update` to
 
 **Manual**
 
-Clone the repo and copy `skills/spinner-customizer/` into `~/.claude/skills/`, with the `themes/` folder
-alongside it.
+Clone the repo and copy `SKILL.md`, `references/`, `scripts/`, and `themes/` into
+`~/.claude/skills/spinner-customizer/`. Or just run `npx spinnerverbs4cc`, which does exactly that.
 
 ## Use it
 
@@ -78,8 +78,8 @@ and get a maintainer's approval before it lands on `main`.
 - `verbs.json` is the single source of truth for each theme.
 - `scripts/build.mjs` regenerates the verb list inside each README and the theme index.
 - `scripts/validate.mjs` lints every theme; CI runs it and the sync check on every pull request.
-- `skills/spinner-customizer/scripts/apply.mjs` merges a theme into a `settings.json` without disturbing
-  your other settings, and writes a `.bak` backup first.
+- `scripts/apply.mjs` merges a theme into a `settings.json` without disturbing your other settings, and
+  writes a `.bak` backup first.
 
 ## License
 

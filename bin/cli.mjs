@@ -42,10 +42,9 @@ const skillsDir = dirIdx !== -1 && args[dirIdx + 1] ? args[dirIdx + 1] : join(ho
 const target = join(skillsDir, SKILL_NAME);
 const update = has('--update');
 
-const srcSkill = join(pkgRoot, 'skills', SKILL_NAME);
-const srcThemes = join(pkgRoot, 'themes');
-if (!existsSync(srcSkill)) {
-  console.error(`Cannot find the skill source at ${srcSkill}. Is the package intact?`);
+const SKILL_ITEMS = ['SKILL.md', 'references', 'scripts', 'themes'];
+if (!existsSync(join(pkgRoot, 'SKILL.md'))) {
+  console.error(`Cannot find SKILL.md at ${pkgRoot}. Is the package intact?`);
   process.exit(1);
 }
 
@@ -55,9 +54,11 @@ if (existsSync(target) && !update) {
 }
 if (existsSync(target)) rmSync(target, { recursive: true, force: true });
 
-mkdirSync(skillsDir, { recursive: true });
-cpSync(srcSkill, target, { recursive: true });
-if (existsSync(srcThemes)) cpSync(srcThemes, join(target, 'themes'), { recursive: true });
+mkdirSync(target, { recursive: true });
+for (const item of SKILL_ITEMS) {
+  const src = join(pkgRoot, item);
+  if (existsSync(src)) cpSync(src, join(target, item), { recursive: true });
+}
 
 console.log(`Installed ${SKILL_NAME} to ${target}`);
 console.log('Open Claude Code and say "change my spinner theme" to use it.');

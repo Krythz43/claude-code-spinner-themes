@@ -57,7 +57,7 @@ the README stays in sync; CI checks this.
 Apply it locally to try it out, ideally to a throwaway file first:
 
 ```
-node skills/spinner-customizer/scripts/apply.mjs <slug> --settings /tmp/preview-settings.json --dry-run
+node scripts/apply.mjs <slug> --settings /tmp/preview-settings.json --dry-run
 ```
 
 When the theme looks right, move on to `contribute-pr.md` to open the pull request.

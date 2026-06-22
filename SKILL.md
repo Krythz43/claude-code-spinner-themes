@@ -20,13 +20,14 @@ Read `references/mechanism.md` once before writing settings so you get the setti
 
 ## Finding the themes and scripts
 
-This skill ships with helper scripts and a `themes/` collection. Locate them at run time:
+This is a single skill at its own root: `SKILL.md` here, with `references/`, `scripts/`, and `themes/`
+beside it. Locate things at run time:
 
 - Themes: the first of these that exists: `$CLAUDE_PLUGIN_ROOT/themes`, then `themes/` next to this
-  skill, then `themes/` at the repo root. The scripts below resolve this for you.
-- `apply.mjs`: in this skill's `scripts/` folder. It writes verbs into a `settings.json` safely.
-- `build.mjs` and `validate.mjs`: at the repo root in `scripts/` (present when working inside the repo,
-  used for create and contribute flows).
+  `SKILL.md`. `apply.mjs` resolves this for you, or pass `--themes <dir>`.
+- `scripts/apply.mjs`: writes verbs into a `settings.json` safely.
+- `scripts/build.mjs` and `scripts/validate.mjs`: sync and lint themes, used by the create and
+  contribute flows (run these from a clone of the repo).
 
 When unsure of the path, run `pwd` and `ls`, or pass `--themes <dir>` to `apply.mjs`.
 
