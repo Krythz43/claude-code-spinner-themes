@@ -1,0 +1,14 @@
+# Dependencies (this project has none, but keep installs out just in case)
+node_modules/
+
+# settings.json backups written by apply.mjs
+*.bak
+settings.json.bak
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+*.log
+
+# npm pack output
+*.tgz

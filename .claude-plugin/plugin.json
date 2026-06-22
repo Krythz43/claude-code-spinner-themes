@@ -1,0 +1,8 @@
+{
+  "name": "spinner-themes",
+  "version": "0.1.0",
+  "description": "Themes for the Claude Code spinner, plus a skill to apply, create, and contribute them.",
+  "author": {
+    "name": "Krithick"
+  }
+}

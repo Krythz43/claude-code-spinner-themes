@@ -1,0 +1,14 @@
+{
+  "name": "Your theme name",
+  "slug": "your-theme-slug",
+  "description": "One sentence on the vibe, shown in the theme index.",
+  "maintainers": [
+    { "name": "Your name", "github": "your-github-handle" }
+  ],
+  "tags": ["example"],
+  "verbs": [
+    "Doing the first themed thing",
+    "Doing the second themed thing",
+    "Doing the third themed thing"
+  ]
+}

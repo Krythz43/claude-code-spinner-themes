@@ -1,0 +1,21 @@
+{
+  "name": "claude-code-spinner-themes",
+  "owner": {
+    "name": "Krithick"
+  },
+  "metadata": {
+    "description": "Community themes for the Claude Code spinner.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "spinner-themes",
+      "description": "Themes for the Claude Code spinner, plus a skill to apply, create, and contribute them.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/spinner-customizer"
+      ]
+    }
+  ]
+}
