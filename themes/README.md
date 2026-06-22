@@ -14,6 +14,7 @@ Want to add your own? See [CONTRIBUTING](../CONTRIBUTING.md). The easiest path i
 | Theme | Verbs | Maintainers | What it is |
 | --- | --- | --- | --- |
 | [Pokemon](POKEMON/) | 40 | [@Krythz43](https://github.com/Krythz43) | Gotta catch them all while Claude works. A trainer's journey, one spinner at a time. |
+| [Taylor Swift](TAYLORSWIFT/) | 36 | [@Krythz43](https://github.com/Krythz43) | Niche Taylor Swift references across every era, set to the rhythm of shipping code. |
 
 <!-- END GENERATED INDEX -->
 
