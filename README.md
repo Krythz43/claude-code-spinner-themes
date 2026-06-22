@@ -38,11 +38,20 @@ Pick one. All three give you the same skill.
 
 **npm**
 
+Run it once with npx, no install needed:
+
 ```
 npx spinnerverbs4cc
 ```
 
-This copies the skill and the themes into `~/.claude/skills/`. Add `--update` to refresh a later version.
+Or install the command globally and run it:
+
+```
+npm install -g spinnerverbs4cc
+spinnerverbs4cc            # installs the skill; re-run with --update to refresh
+```
+
+Either way it copies the skill and themes into `~/.claude/skills/spinner-customizer/`.
 
 **Manual**
 
