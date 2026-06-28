@@ -8,15 +8,20 @@ as the interface, with the freedom to tune the vibe.
 Locate the themes directory (see SKILL.md for resolution order). Read each theme's `verbs.json` for
 `name`, `slug`, `description`, `verbs`, and `authors`.
 
-Present with the AskUserQuestion tool. Showcase only about 4 to 5 options, never a wall of them:
+Present with the AskUserQuestion tool. It shows at most 4 options at once, so you cannot list a whole
+catalog in one prompt. Use the slots well:
 
-- The themes that best fit the user's hints. If they named a vibe or a fandom, lead with matches.
+- The best 2 or 3 themes for the user's hints. If they named a vibe or a fandom, lead with matches.
 - A visible "Make my own theme" option (routes to `create-theme.md`).
-- A "Show me the whole list" option, so the user can opt into the full catalog when they want it.
+- When more themes remain, a "Show me the whole list" option. When the user picks it, page through the
+  rest with AskUserQuestion, a few per page, each page ending in a "More themes" option, so the user
+  moves through the whole catalog by navigating, never a text dump.
 
-Put a couple of sample verbs in each option's preview so the flavor comes through. List these options
-explicitly; do not rely on the picker's hidden "Other". If the user picks "Show me the whole list",
-present the rest (in batches if there are many).
+When the whole catalog already fits in 4 options, just show them all (no "Show me the whole list" needed).
+
+Put a sample verb or two in each option's description (a short line), not in a multi-line preview: some
+terminals collapse previews to a "N lines hidden" fold, so the flavor never shows. Keep any preview to a
+single line, or omit it. List options explicitly; do not rely on the picker's hidden "Other".
 
 ## 2. Tune the vibe (the heart of this skill)
 
