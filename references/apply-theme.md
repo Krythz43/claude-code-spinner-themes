@@ -23,11 +23,12 @@ Put a sample verb or two in each option's description (a short line), not in a m
 terminals collapse previews to a "N lines hidden" fold, so the flavor never shows. Keep any preview to a
 single line, or omit it. List options explicitly; do not rely on the picker's hidden "Other".
 
-## 2. Tune the vibe (the heart of this skill)
+## 2. Shape the verbs before applying
 
-A theme is a starting point, not a fixed set. Once a theme is picked, use the AskUserQuestion tool AGAIN
-to offer about 4 to 5 vibe variations WITHIN that theme, so the user shapes the mood. Invent directions
-that genuinely fit the theme. For Taylor Swift, for example:
+A theme is a starting point, not a fixed set. After a theme is picked, use the AskUserQuestion tool AGAIN
+to offer ways to shape it: apply as-is, shift the vibe, regenerate a fresh set, or customize the existing
+verbs (add, remove, swap, or fix specific ones). The vibe shift is the signature move: offer about 4 to 5
+vibe directions WITHIN the theme. For Taylor Swift, for example:
 
 - Balanced: deep cuts across every era
 - More energetic: pop bangers, reputation and 1989 energy
@@ -36,13 +37,15 @@ that genuinely fit the theme. For Taylor Swift, for example:
 - Let me describe the vibe myself
 
 Always include a "describe my own vibe" option. When the user chooses, regenerate or reselect the verbs
-toward that mood: keep them on theme, one line, gerund or short phrase, no trailing ellipsis, deduped,
+toward that mood: keep each one a task in progress (something happening now, any phrasing), on theme, one line, no trailing ellipsis, deduped,
 roughly 20 to 50. Show the result and keep tuning on request ("more energetic", "swap that one", "add a
 few about the vault"). The user can always ask to see and edit the full verb list directly.
 
-Tuning a repo theme produces a personalized set for the user's own settings; it does not change the
-shared theme in the repo. If the user wants to keep their tuned set as a real theme, go to
-`create-theme.md`.
+Regenerate produces a brand new set for the same theme; customize lets the user add, remove, swap, or
+reword specific verbs and fix any that are not a task in progress. By default all of this makes a
+personalized set for the user's own settings and does not change the shared theme in the repo. To save
+the result back into the theme, or as a new one, follow "Maintain a theme" or `create-theme.md`, then run
+`build.mjs` and `validate.mjs`.
 
 ## 3. Confirm scope and mode
 

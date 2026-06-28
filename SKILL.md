@@ -39,8 +39,9 @@ Pick the workflow that matches the request, then follow the matching reference f
 The AskUserQuestion tool shows at most 4 options, so showcase the best 2 or 3 themes plus "Make my own
 theme", and when more themes remain add "Show me the whole list" to page through the rest by navigating.
 Once a theme is picked, use AskUserQuestion again
-to offer vibe variations within it (for Taylor Swift: more energetic, more nostalgic, more folklore-ish)
-and regenerate the verbs to match. Confirm scope and mode, then apply with `apply.mjs`. Never hand-edit
+to offer ways to shape it: apply as-is, shift the vibe (energetic, nostalgic, an era), regenerate a fresh
+set, or customize the existing verbs (add, remove, swap, or fix specific ones). Confirm scope and mode,
+then apply with `apply.mjs`. Never hand-edit
 `settings.json`; the script preserves other settings and writes a backup.
 
 ### Create a theme  ->  `references/create-theme.md`
@@ -48,7 +49,8 @@ Help the user invent a coherent set of verbs, offering vibe directions via AskUs
 fits. Scaffold the theme folder from `themes/_TEMPLATE`, write `verbs.json`, run `build.mjs`, and validate.
 
 ### Maintain a theme  ->  `references/create-theme.md` (same rules)
-Edit an existing theme's `verbs.json`, rerun `build.mjs`, and validate.
+Regenerate or customize an existing theme's verbs in `verbs.json` (keep each a task in progress), rerun
+`build.mjs`, and validate.
 
 ### Contribute a theme  ->  `references/contribute-pr.md`
 Fork or branch, commit the new or changed theme, push, and open a pull request. CI must pass and a
@@ -58,6 +60,9 @@ reviewer must approve before merge.
 
 - Confirm scope (user, project, or local) and mode (replace or append) before writing. Default to user
   scope and replace mode, but say what you are about to do and let the user redirect.
+- Every verb reads as a task in progress, work happening right now (the spinner shows it as "<verb>…").
+  It need not start with an -ing word or be a grammatical verb; it just has to convey that something is
+  underway, not a static label or a standalone quote.
 - Verbs never end with an ellipsis. Claude Code adds it. `apply.mjs` strips trailing ellipses anyway.
 - `verbs.json` is the source of truth. After any change to verbs, run `build.mjs` so the README list
   stays in sync, then `validate.mjs`. CI rejects out-of-sync or invalid themes.

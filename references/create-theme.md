@@ -4,10 +4,11 @@ Goal: a coherent, on-theme set of verbs in a valid theme folder, with the README
 
 ## 1. Gather the idea
 
-Ask for these (use the AskUserQuestion tool for the vibe step):
+Use the AskUserQuestion tool for every choice here, including the first one, never a plain text list.
 
-- A name and a one-line description (the description shows in the theme index).
-- The source material (a game, a profession, a movie, a fandom, a mood).
+- The theme itself: present a few example ideas (a show, a game, a craft, a mood) plus a visible
+  "Describe my own theme" option, so the user picks an idea or types their own in the input.
+- A one-line description (it shows in the theme index).
 - The vibe. Offer about 4 to 5 vibe directions via AskUserQuestion that fit the theme (for a music
   artist: energetic, nostalgic, a specific era; for a game: cozy, hardcore, lore-heavy), plus a
   "describe my own" option, so the verbs match the feel the user wants.
@@ -17,9 +18,15 @@ Ask for these (use the AskUserQuestion tool for the vibe step):
 
 ## 2. Write the verbs
 
+The spinner renders each verb as "<verb>…" while Claude works, so every verb must read as a task in
+progress, something happening right now. It does not have to start with an -ing word or be a grammatical
+verb; it just has to convey that work is underway.
+
 Good verbs:
 
-- Read as something in progress: "Charting a route", "Calibrating the warp core", "Folding the dough".
+- Indicate ongoing work, in any phrasing: "Charting a route", "Deep in the warp core", "On the Elite Four".
+- Avoid static labels or standalone quotes that do not imply progress. To use a catchphrase, frame it as
+  something happening: not "That's what she said" but "Stuck on a that's-what-she-said bug".
 - Match the chosen vibe and vary the imagery, so the rotation does not feel repetitive.
 - Are one line, under about 60 characters, with no trailing ellipsis.
 - Are distinct from each other (no near-duplicates).

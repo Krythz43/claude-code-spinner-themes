@@ -32,6 +32,8 @@ Higher numbers win where they overlap.
 
 ## Rules and limits
 
+- Each verb reads as a task in progress, something happening right now (the spinner shows it as
+  "<verb>…"). It need not be an -ing word or a traditional verb; it just has to indicate work is underway.
 - No trailing ellipsis on any verb.
 - Keep verbs on one line, no tabs or newlines.
 - Roughly 20 to 50 verbs reads best. Very long verbs can truncate in narrow terminals (aim under 60
