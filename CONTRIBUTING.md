@@ -17,14 +17,14 @@ process.
      "name": "Star Trek",
      "slug": "startrek",
      "description": "One line shown in the theme index.",
-     "maintainers": [{ "name": "Your Name", "github": "your-handle" }],
+     "authors": [{ "name": "Your Name", "github": "your-handle" }],
      "tags": ["sci-fi", "tv"],
      "verbs": ["Aligning the deflector dish", "Consulting the ship's computer"]
    }
    ```
 
    - `slug`: lowercase letters, digits, and hyphens.
-   - `maintainers[].github`: your handle, no `@`.
+   - `authors`: one entry per author (a theme can have several); GitHub handle only, no `@`.
    - `verbs`: one line each, no trailing ellipsis, no near-duplicates. Roughly 20 to 50 reads best, and
      keeping each under about 60 characters avoids truncation in narrow terminals.
 
@@ -68,6 +68,6 @@ push your branch to the fork, and open the PR from there.
 
 ## What happens next
 
-CI runs `validate.mjs` and `build.mjs --check` on your PR. Both must pass. A maintainer then reviews and
+CI runs `validate.mjs` and `build.mjs --check` on your PR. Both must pass. A reviewer then looks it over and
 approves before it merges. If CI fails, read the log, fix the theme, run `build.mjs` again, and push to
 the same branch.

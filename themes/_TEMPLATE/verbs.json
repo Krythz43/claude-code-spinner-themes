@@ -2,8 +2,9 @@
   "name": "Your theme name",
   "slug": "your-theme-slug",
   "description": "One sentence on the vibe, shown in the theme index.",
-  "maintainers": [
-    { "name": "Your name", "github": "your-github-handle" }
+  "authors": [
+    { "name": "Your name", "github": "your-github-handle" },
+    { "name": "Co-author (omit if solo)", "github": "another-handle" }
   ],
   "tags": ["example"],
   "verbs": [

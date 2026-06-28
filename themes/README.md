@@ -11,7 +11,7 @@ Want to add your own? See [CONTRIBUTING](../CONTRIBUTING.md). The easiest path i
 
 <!-- BEGIN GENERATED INDEX: do not edit by hand, run scripts/build.mjs -->
 
-| Theme | Verbs | Maintainers | What it is |
+| Theme | Verbs | Authors | What it is |
 | --- | --- | --- | --- |
 | [Pokemon](POKEMON/) | 40 | [@Krythz43](https://github.com/Krythz43) | Gotta catch them all while Claude works. A trainer's journey, one spinner at a time. |
 | [Taylor Swift](TAYLORSWIFT/) | 36 | [@Krythz43](https://github.com/Krythz43) | Niche Taylor Swift references across every era, set to the rhythm of shipping code. |
@@ -22,7 +22,7 @@ Want to add your own? See [CONTRIBUTING](../CONTRIBUTING.md). The easiest path i
 
 ```
 themes/YOUR-THEME/
-  verbs.json    source of truth: name, slug, description, maintainers, tags, verbs
+  verbs.json    source of truth: name, slug, description, authors, tags, verbs
   README.md     your write up on top, generated verb list at the bottom
 ```
 

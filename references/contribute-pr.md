@@ -1,7 +1,7 @@
 # Contribute a theme as a pull request
 
 Goal: get the new or changed theme onto a branch and into a pull request. `main` is protected, so direct
-pushes are rejected; every change goes through a PR that passes CI and gets a maintainer's approval.
+pushes are rejected; every change goes through a PR that passes CI and gets a reviewer's approval.
 
 ## Preconditions
 
@@ -47,5 +47,5 @@ The pull request template asks contributors to confirm:
 ## After opening
 
 Tell the contributor: CI runs `validate.mjs` and `build.mjs --check` on the PR, both must pass, and a
-maintainer reviews and approves before merge. If CI fails, read the log, fix the theme, rebuild, and push
+reviewer reviews and approves before merge. If CI fails, read the log, fix the theme, rebuild, and push
 again to the same branch.

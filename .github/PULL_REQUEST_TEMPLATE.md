@@ -10,7 +10,7 @@
 - [ ] Verbs have no trailing ellipsis and no near-duplicates
 - [ ] Roughly 20 to 50 verbs, each on one line and reasonably short
 - [ ] For a branded or trademarked theme, the theme README has a short "fan made, not affiliated" note
-- [ ] `maintainers` in `verbs.json` lists me with my GitHub handle
+- [ ] `authors` in `verbs.json` lists me with my GitHub handle
 
 ## Notes for reviewers
 

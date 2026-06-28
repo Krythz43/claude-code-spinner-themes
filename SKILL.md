@@ -36,20 +36,22 @@ When unsure of the path, run `pwd` and `ls`, or pass `--themes <dir>` to `apply.
 Pick the workflow that matches the request, then follow the matching reference file.
 
 ### Apply a theme  ->  `references/apply-theme.md`
-Browse the available themes and present them with the AskUserQuestion tool, always including a visible
-"Make my own theme" choice. Let the user pick, confirm scope and mode, then apply with `apply.mjs`.
-Never hand-edit `settings.json`; the script preserves other settings and writes a backup.
+Showcase about 4 to 5 themes with the AskUserQuestion tool (plus a visible "Make my own theme" and a
+"Show me the whole list" option), never a wall of them. Once a theme is picked, use AskUserQuestion again
+to offer vibe variations within it (for Taylor Swift: more energetic, more nostalgic, more folklore-ish)
+and regenerate the verbs to match. Confirm scope and mode, then apply with `apply.mjs`. Never hand-edit
+`settings.json`; the script preserves other settings and writes a backup.
 
 ### Create a theme  ->  `references/create-theme.md`
-Help the user invent a coherent set of verbs, scaffold the theme folder from `themes/_TEMPLATE`, write
-`verbs.json`, run `build.mjs`, and validate.
+Help the user invent a coherent set of verbs, offering vibe directions via AskUserQuestion so the mood
+fits. Scaffold the theme folder from `themes/_TEMPLATE`, write `verbs.json`, run `build.mjs`, and validate.
 
 ### Maintain a theme  ->  `references/create-theme.md` (same rules)
 Edit an existing theme's `verbs.json`, rerun `build.mjs`, and validate.
 
 ### Contribute a theme  ->  `references/contribute-pr.md`
 Fork or branch, commit the new or changed theme, push, and open a pull request. CI must pass and a
-maintainer must approve before merge.
+reviewer must approve before merge.
 
 ## Rules that always apply
 
@@ -63,3 +65,7 @@ maintainer must approve before merge.
 - When you offer the user a set of choices (which theme, which scope, create versus apply), use the
   AskUserQuestion tool rather than a plain text list, and make any "make your own" or "something else"
   path an explicit, visible option, never a hidden one.
+- Showcase only about 4 to 5 options at a time, never the whole catalog; offer a "Show me the whole list"
+  option for users who want it. The signature move of this skill is using AskUserQuestion to offer vibe
+  variations within a theme (energetic, nostalgic, a specific era) and regenerating the verbs to match,
+  so the user tunes the feel rather than just picking a fixed set.

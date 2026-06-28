@@ -2,7 +2,7 @@
   "name": "Pokemon",
   "slug": "pokemon",
   "description": "Gotta catch them all while Claude works. A trainer's journey, one spinner at a time.",
-  "maintainers": [
+  "authors": [
     { "name": "Krithick", "github": "Krythz43" }
   ],
   "tags": ["games", "nostalgia", "retro"],

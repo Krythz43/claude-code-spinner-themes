@@ -5,7 +5,7 @@ cuts and lore (the vault, the easter eggs, folklore and evermore, Midnights, a l
 just the radio hits, each twisted into the work of shipping code. Debug like it is me trying, merge like
 you survived the Great War, ship it long story short.
 
-Maintained by [@Krythz43](https://github.com/Krythz43).
+By [@Krythz43](https://github.com/Krythz43).
 
 > Fan made theme. Not affiliated with, endorsed by, or sponsored by Taylor Swift or her labels. Song
 > titles and lyric nods are referenced as fan tribute.

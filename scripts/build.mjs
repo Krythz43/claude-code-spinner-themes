@@ -39,13 +39,13 @@ for (const folder of folders) {
   readme = replaced === null ? `${readme.trimEnd()}\n\n## Verbs\n\n${block}\n` : replaced;
   ensureWrite(readmePath, readme);
 
-  const maint = (data.maintainers || [])
+  const authorsCol = (data.authors || [])
     .map((m) => `[@${m.github}](https://github.com/${m.github})`)
     .join(', ');
-  rows.push(`| [${data.name}](${folder}/) | ${data.verbs.length} | ${maint} | ${data.description} |`);
+  rows.push(`| [${data.name}](${folder}/) | ${data.verbs.length} | ${authorsCol} | ${data.description} |`);
 }
 
-const table = ['| Theme | Verbs | Maintainers | What it is |', '| --- | --- | --- | --- |', ...rows].join('\n');
+const table = ['| Theme | Verbs | Authors | What it is |', '| --- | --- | --- | --- |', ...rows].join('\n');
 const indexBlock = `${BEGIN_INDEX}\n\n${table}\n\n${END_INDEX}`;
 const indexPath = join(THEMES_DIR, 'README.md');
 

@@ -4,7 +4,7 @@ Write a few sentences about the theme here: the vibe, who it is for, and anythin
 everything you want to say above the Verbs heading. The list below is generated from `verbs.json`, so do
 not edit it by hand.
 
-Maintained by [@your-github-handle](https://github.com/your-github-handle).
+By [@your-github-handle](https://github.com/your-github-handle) and [@another-handle](https://github.com/another-handle).
 
 ## Verbs
 

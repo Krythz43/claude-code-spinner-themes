@@ -69,11 +69,11 @@ export function validateTheme(data, folder) {
   must(typeof data.name === 'string' && data.name.trim().length > 0, 'name must be a non-empty string');
   must(typeof data.slug === 'string' && /^[a-z0-9-]+$/.test(data.slug || ''), 'slug must be lowercase letters, digits, or hyphens');
   must(typeof data.description === 'string' && data.description.trim().length > 0, 'description must be a non-empty string');
-  must(Array.isArray(data.maintainers) && data.maintainers.length >= 1, 'maintainers must have at least one entry');
-  if (Array.isArray(data.maintainers)) {
-    data.maintainers.forEach((m, i) => {
-      must(m && typeof m.name === 'string' && m.name.trim(), `maintainers[${i}].name is required`);
-      must(m && typeof m.github === 'string' && /^[A-Za-z0-9-]+$/.test((m && m.github) || ''), `maintainers[${i}].github must be a GitHub handle without the @`);
+  must(Array.isArray(data.authors) && data.authors.length >= 1, 'authors must have at least one entry');
+  if (Array.isArray(data.authors)) {
+    data.authors.forEach((m, i) => {
+      must(m && typeof m.name === 'string' && m.name.trim(), `authors[${i}].name is required`);
+      must(m && typeof m.github === 'string' && /^[A-Za-z0-9-]+$/.test((m && m.github) || ''), `authors[${i}].github must be a GitHub handle without the @`);
     });
   }
 

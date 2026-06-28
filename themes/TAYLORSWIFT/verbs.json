@@ -2,7 +2,7 @@
   "name": "Taylor Swift",
   "slug": "taylorswift",
   "description": "Niche Taylor Swift references across every era, set to the rhythm of shipping code.",
-  "maintainers": [
+  "authors": [
     { "name": "Krithick", "github": "Krythz43" }
   ],
   "tags": ["music", "pop", "taylor-swift"],

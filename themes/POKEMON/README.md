@@ -6,7 +6,7 @@ Game Boy in your hands, this one is for you.
 
 Pairs well with the `replace` mode so every spinner is on theme.
 
-Maintained by [@Krythz43](https://github.com/Krythz43).
+By [@Krythz43](https://github.com/Krythz43).
 
 > This is a fan made theme. It is not affiliated with, endorsed by, or sponsored by Nintendo, Game Freak,
 > Creatures Inc., or The Pokemon Company. Pokemon and related names are trademarks of their owners.

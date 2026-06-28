@@ -80,7 +80,7 @@ with the full list at the bottom. The first theme is [Pokemon](themes/POKEMON/).
 The skill writes the verbs with you, scaffolds the folder, validates it, and opens the pull request.
 Clone the repo, open Claude Code, and say "help me make a spinner theme". If you prefer to do it by
 hand, see [CONTRIBUTING](CONTRIBUTING.md). Every theme goes through a pull request that has to pass CI
-and get a maintainer's approval before it lands on `main`.
+and get a reviewer's approval before it lands on `main`.
 
 ## How it works
 

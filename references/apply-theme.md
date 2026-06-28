@@ -1,63 +1,74 @@
-# Apply a theme
+# Browse, tune, and apply a theme
 
-Goal: get a theme's verbs into the right `settings.json` without disturbing anything else.
+Goal: get a set of verbs the user loves into the right `settings.json`, using the AskUserQuestion tool
+as the interface, with the freedom to tune the vibe.
 
-## 1. Find and present the themes
+## 1. Showcase a few themes, not the whole catalog
 
-Locate the themes directory (see SKILL.md for resolution order). Read each theme folder's `verbs.json`
-for `name`, `description`, `verbs.length`, and `maintainers`.
+Locate the themes directory (see SKILL.md for resolution order). Read each theme's `verbs.json` for
+`name`, `slug`, `description`, `verbs`, and `authors`.
 
-Present the choices with the AskUserQuestion tool, not a plain text list. It gives the user a clean
-picker, and you can drop a couple of sample verbs into each option's preview so they feel the flavor
-before choosing.
+Present with the AskUserQuestion tool. Showcase only about 4 to 5 options, never a wall of them:
 
-Always include one extra option, "Make my own theme", as a first-class, visible choice that routes to
-`create-theme.md`. Browsing and creating are two sides of this skill, and a user who does not love any
-existing theme needs an obvious way to build one. Do not bury this behind the picker's hidden "Other"
-entry; list it explicitly, because users do not always notice "Other".
+- The themes that best fit the user's hints. If they named a vibe or a fandom, lead with matches.
+- A visible "Make my own theme" option (routes to `create-theme.md`).
+- A "Show me the whole list" option, so the user can opt into the full catalog when they want it.
 
-If there are many themes, do not dump them all. First ask what vibe the user is into (games, sci-fi,
-cooking, calm, chaotic), then present the closest few plus "Make my own theme", and let them ask to see
-more.
+Put a couple of sample verbs in each option's preview so the flavor comes through. List these options
+explicitly; do not rely on the picker's hidden "Other". If the user picks "Show me the whole list",
+present the rest (in batches if there are many).
 
-## 2. Confirm scope and mode
+## 2. Tune the vibe (the heart of this skill)
+
+A theme is a starting point, not a fixed set. Once a theme is picked, use the AskUserQuestion tool AGAIN
+to offer about 4 to 5 vibe variations WITHIN that theme, so the user shapes the mood. Invent directions
+that genuinely fit the theme. For Taylor Swift, for example:
+
+- Balanced: deep cuts across every era
+- More energetic: pop bangers, reputation and 1989 energy
+- More nostalgic: debut, Fearless, Speak Now
+- More folklore-ish: folklore and evermore, cottagecore, melancholy
+- Let me describe the vibe myself
+
+Always include a "describe my own vibe" option. When the user chooses, regenerate or reselect the verbs
+toward that mood: keep them on theme, one line, gerund or short phrase, no trailing ellipsis, deduped,
+roughly 20 to 50. Show the result and keep tuning on request ("more energetic", "swap that one", "add a
+few about the vault"). The user can always ask to see and edit the full verb list directly.
+
+Tuning a repo theme produces a personalized set for the user's own settings; it does not change the
+shared theme in the repo. If the user wants to keep their tuned set as a real theme, go to
+`create-theme.md`.
+
+## 3. Confirm scope and mode
 
 Before writing, state what you will do and let the user redirect:
 
 - Scope: `user` (default, `~/.claude/settings.json`), `project`, or `local`. See mechanism.md.
 - Mode: `replace` (default, only these verbs) or `append` (these plus Claude's defaults).
-- If the user already has custom verbs and wants to keep them and add this theme, use
-  `--add-to-existing` (it unions and writes `replace`).
+- To keep the user's current custom verbs and add a theme on top, use `--add-to-existing`.
 
-## 3. Apply with the script
+## 4. Apply with the script
 
 Always use `apply.mjs`. It preserves every other setting, writes a `.bak` backup, strips trailing
-ellipses, and de-duplicates.
+ellipses, and de-duplicates. For a saved theme pass the slug; for a tuned set that is not saved, write
+the verbs to a temp `verbs.json` and pass its path:
 
 ```
-node scripts/apply.mjs <slug> --scope user --mode replace
-```
+# a saved theme
+node scripts/apply.mjs pokemon --scope user --mode replace
 
-Examples:
+# a vibe-tuned set you just generated (temp file needs only {"name": "...", "verbs": [...]})
+node scripts/apply.mjs /tmp/tuned-verbs.json --scope user --mode replace
 
-```
-# default user scope, replace mode
-node scripts/apply.mjs pokemon
-
-# project scope, append to Claude's defaults
-node scripts/apply.mjs pokemon --scope project --mode append
-
-# keep my current custom verbs and add this theme on top
-node scripts/apply.mjs pokemon --add-to-existing
+# append to Claude's defaults, or add on top of the user's current custom verbs
+node scripts/apply.mjs taylorswift --mode append
+node scripts/apply.mjs taylorswift --add-to-existing
 
 # preview without writing
 node scripts/apply.mjs pokemon --dry-run
 ```
 
-You can also pass a path directly: `node scripts/apply.mjs ./themes/POKEMON/verbs.json`.
+## 5. Confirm
 
-## 4. Confirm
-
-Tell the user how many verbs were written, to which file, that a backup exists, and that they should
-start a new turn or restart Claude Code to see the change. If they do not like it, the backup is at
-`<settings>.bak`.
+Tell the user how many verbs were written, to which file, that a `.bak` backup exists, and that they
+should start a new turn or restart Claude Code to see the change. The backup is at `<settings>.bak`.
