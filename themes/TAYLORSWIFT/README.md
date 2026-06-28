@@ -29,10 +29,10 @@ By [@Krythz43](https://github.com/Krythz43).
 - Cleaning it up until the diff is Clean
 - Whispering sweet nothings to the linter
 - Tolerating the legacy code
-- Long story short, it compiled
+- Wrapping it up, long story short
 - Coding cozy in a cardigan
 - Watching for snow on the beach
-- It's me, hi, I'm the bug, it's me
+- Admitting it's me, hi, I'm the bug
 - Refactoring until it's bejeweled
 - Lost in a lavender haze of configs
 - Enchanted to meet this edge case
@@ -40,15 +40,15 @@ By [@Krythz43](https://github.com/Krythz43).
 - Going back to December's commit
 - Weaving an invisible string of imports
 - Building a getaway car for the hotfix
-- Champagne problems in the changelog
+- Nursing champagne problems in the changelog
 - The archer aiming at the root cause
 - Taking Marjorie's advice in review
 - Ivy creeping through the dependency tree
 - Willow winding through the call stack
-- Right where you left me in the diff
+- Waiting right where you left me in the diff
 - Chasing daylight on the last test
 - Mirrorball spinning up the CI
-- The 1 that finally got merged
+- Merging the 1 that finally fits
 - So long, London, shipping anyway
 
 <!-- END GENERATED VERBS -->
