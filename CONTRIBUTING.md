@@ -42,7 +42,8 @@ process.
 
 ## Good verbs
 
-- Read as something in progress: "Charting a route", "Folding the dough", "Calibrating the array".
+- Read as a task in progress, work happening now, in any phrasing. The spinner shows each as "<verb>…",
+  so not a bare quote or label: "Charting a route", "Folding the dough", "Deep in the warp core".
 - Cover the breadth of the theme rather than ten takes on one action.
 - Stay in good taste. Nothing hateful, harassing, or NSFW.
 

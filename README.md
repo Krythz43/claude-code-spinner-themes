@@ -73,7 +73,8 @@ append, backs up your `settings.json`, and applies the change. Start a new turn 
 ## Themes
 
 Browse them in [`themes/`](themes/). Each theme has a `verbs.json` (the source of truth) and a README
-with the full list at the bottom. The first theme is [Pokemon](themes/POKEMON/).
+with the full list at the bottom. So far: [The Office](themes/OFFICE/), [Pokemon](themes/POKEMON/), and
+[Taylor Swift](themes/TAYLORSWIFT/).
 
 ## Make your own
 

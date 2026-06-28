@@ -7,7 +7,7 @@ the project. It will be trimmed to a short contributor guide before the first pu
 
 `claude-code-spinner-themes` is one repo that is a Claude Code skill, a plugin, a marketplace, and an
 npm installer at once. It manages the `spinnerVerbs` setting (see
-`skills/spinner-customizer/references/mechanism.md`) and ships a growing collection of themes.
+`references/mechanism.md`) and ships a growing collection of themes.
 
 ## Layout
 
